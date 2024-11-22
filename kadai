@@ -1,0 +1,37 @@
+#!/usr/bin/python3
+# SPDX-FileCopyrightText: 2024 Junsei Iimori <craftboy0228@gmail.com>
+# SPDX-License-Identifier: BSD-3-Clause
+
+import sys
+import math
+
+def calculate_trig_function(line):
+    try:
+        # 入力を空白で分割する（例: "sin 30"）
+        func, value = line.split()
+        value = float(value)  # 角度を数値に変換
+        # 関数名に応じて計算
+        if func.lower() == "sin":
+            return math.sin(math.radians(value))  # 度をラジアンに変換
+        elif func.lower() == "cos":
+            return math.cos(math.radians(value))
+        elif func.lower() == "tan":
+            return math.tan(math.radians(value))
+        else:
+            raise ValueError(f"未知の関数: {func}")
+    except Exception as e:
+        print(f"エラー: {e}", file=sys.stderr)
+        return 0
+
+# 結果を合計する
+total = 0
+
+for line in sys.stdin:
+    line = line.rstrip()  # 改行を削除
+    if not line:
+        continue  # 空行を無視
+    total += calculate_trig_function(line)
+
+print(total)
+
+
