@@ -6,24 +6,22 @@ import sys
 import math
 
 def calculate_trig_function(line):
-    # 入力を空白で分割する（例: "sin 30"）
     func, value = line.split()
-    value = float(value)  # 角度を数値に変換
-    # 関数名に応じて計算
+    value = float(value)  
+    
     if func.lower() == "sin":
-        return math.sin(math.radians(value))  # 度をラジアンに変換
+        return math.sin(math.radians(value))  
     elif func.lower() == "cos":
         return math.cos(math.radians(value))
     elif func.lower() == "tan":
         return math.tan(math.radians(value))
 
-# 結果を合計する
 total = 0
 
 for line in sys.stdin:
-    line = line.rstrip()  # 改行を削除
+    line = line.rstrip()  
     if not line:
-        continue  # 空行を無視
+        continue  
     total += calculate_trig_function(line)
 
 print(total)
