@@ -23,7 +23,7 @@ out=$(echo "10 / 4"| ./kadai)
 [ "${out}" = 2.5 ] || ng "$LINENO"
 
 ###変な入力###
-out=$(echo "a + 1" | ./calculator)
+out=$(echo "a + 1" | ./kadai)
 [ "${out}" = "Error: 無効な操作" ] || ng ${LINENO}
 
 [ "${res}" = 0 ] && echo OK
