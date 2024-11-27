@@ -24,7 +24,7 @@ out=$(echo "10 / 4"| ./kadai)
 
 ###変な入力###
 out=$(echo "a + 1" | ./kadai)
-[ "${out}" = "Error: 無効な操作" ] || ng ${LINENO}
+[ "${out}" = "Error: invalid literal for int() with base 10: 'a'" ] || ng ${LINENO}
 
 [ "${res}" = 0 ] && echo OK
 exit $res
