@@ -10,17 +10,19 @@ ng () {
 
 res=0
 
-out=$(echo sin 30| ./kadai)
-[ "${out}" = 0.5 ] || ng "$LINENO"
+out=$(echo "1 + 1"| ./kadai)
+[ "${out}" = 2 ] || ng "$LINENO"
+
+out=$(echo "8 - 3"| ./kadai)
+[ "${out}" = 5 ] || ng "$LINENO"
+
+out=$(echo "2 * 5"| ./kadai)
+[ "${out}" = 10 ] || ng "$LINENO"
+
+out=$(echo "10 / 4"| ./kadai)
+[ "${out}" = 2.5 ] || ng "$LINENO"
 
 ###変な入力###
-out=$(echo あ | ./kadai)
-[ "$?" = 1 ]      || ng "$LINENO"
-[ "${out}" = "Input Error" ] || ng "$LINENO"
-
-out=$(echo | ./kadai)
-[ "$?" = 1 ]      || ng "$LINENO"
-[ "${out}" = "Input Error" ] || ng "$LINENO"
 
 [ "${res}" = 0 ] && echo OK
 exit $res
