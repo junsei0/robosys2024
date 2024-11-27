@@ -27,3 +27,4 @@ out=$(echo "10 / 4"| ./kadai)
 [ "${res}" = 0 ] && echo OK
 exit $res
 
+
