@@ -14,7 +14,7 @@ out=$(echo sin 30| ./kadai)
 [ "${out}" = 0.50 ] || ng "$LINENO"
 
 ###変な入力###
-out=$(echo あ | ./kadai)
+out=$(echo sin あ| ./kadai)
 [ "$?" = 1 ]      || ng "$LINENO"
 [ "${out}" = "Input Error" ] || ng "$LINENO"
 
