@@ -7,7 +7,7 @@ import math
 
 def calculate_trig_function(line):
     func, value = line.split()
-    value = float(value)  
+    value = float(value)
     
     if func.lower() == "sin":
         return math.sin(math.radians(value))  
@@ -24,6 +24,6 @@ for line in sys.stdin:
         continue  
     total += calculate_trig_function(line)
 
-print(total)
+print(f"{total:.2f}")
 
 
