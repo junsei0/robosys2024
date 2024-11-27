@@ -24,5 +24,6 @@ for line in sys.stdin:
         continue  
     total += calculate_trig_function(line)
 
-print(total)
+print(f"{total:.2f}")
+
 
