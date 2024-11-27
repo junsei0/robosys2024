@@ -9,6 +9,8 @@ def calculator(formula):
         a, sign, b = formula.split()
         a = int(a)  
         b = int(b)
+　　except ValueError:
+    　　raise("Error: 無効な操作")
 
         if sign == '+':
             result = a + b
