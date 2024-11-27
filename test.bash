@@ -11,7 +11,7 @@ ng () {
 res=0
 
 out=$(echo sin 30| ./kadai)
-[ "${out}" = 0.5 ] || ng "$LINENO"
+[ "${out}" = 0.50 ] || ng "$LINENO"
 
 ###変な入力###
 out=$(echo あ | ./kadai)
