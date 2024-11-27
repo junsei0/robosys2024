@@ -3,27 +3,36 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 import sys
-import math
 
-def calculate_trig_function(line):
-    func, value = line.split()
-    value = float(value)
-    
-    if func.lower() == "sin":
-        return math.sin(math.radians(value))  
-    elif func.lower() == "cos":
-        return math.cos(math.radians(value))
-    elif func.lower() == "tan":
-        return math.tan(math.radians(value))
+def calculator(formula):
+    try:
+        a, sign, b = formula.split()
+        a = int(a)  
+        b = int(b)
 
-total = 0
+        if sign == '+':
+            result = a + b
+        elif sign == '-':
+            result = a - b
+        elif sign == '*':
+            result = a * b
+        elif sign == '/':
+            if b == 0:
+                raise ValueError("Error: ゼロ除算")
+            result = a / b
+        else:
+            raise ValueError("Error: 無効な操作")
 
-for line in sys.stdin:
-    line = line.rstrip()  
-    if not line:
-        continue  
-    total += calculate_trig_function(line)
+        print(result)
 
-print(f"{total:.2f}")
+    except ValueError as e:
+        print(f"Error: {e}")
+        sys.exit(1)
+    except Exception:
+        print("Error: 無効な入力操作")
+        sys.exit(1)
 
+if __name__ == "__main__":
+    for line in sys.stdin:
+        calculator(line.strip())
 
