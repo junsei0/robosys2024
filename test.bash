@@ -10,21 +10,14 @@ ng () {
 
 res=0
 
-out=$(echo "1 + 1"| ./kadai)
-[ "${out}" = 2 ] || ng "$LINENO"
-
-out=$(echo "8 - 3"| ./kadai)
-[ "${out}" = 5 ] || ng "$LINENO"
-
-out=$(echo "2 * 5"| ./kadai)
-[ "${out}" = 10 ] || ng "$LINENO"
-
-out=$(echo "10 / 4"| ./kadai)
-[ "${out}" = 2.5 ] || ng "$LINENO"
-
 ###変な入力###
-out=$(echo "a + 1" | ./kadai)
-[ "${out}" = "Error: 無効な操作" ] || ng ${LINENO}
+out=$(echo  | ./kadai)
+[ "$?" = 1]	|| ng ${LINENO}
+[ "${out}" = "Input Error" ] || ng ${LINENO}
+
+out=$(echo 12 | ./kadai)
+[ "${out}" = "Error: 指定した文字数の単語はない" ] || ng ${LINENO}
+[ "$?" = 1]	|| ng ${LINENO}
 
 [ "${res}" = 0 ] && echo OK
 exit $res
