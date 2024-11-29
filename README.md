@@ -26,6 +26,15 @@ $ cd robosys2024
 echoコマンドで入力された数字と同じ文字数の単語をランダムで出力するコマンドです。  
 [word.txt](https://github.com/junsei0/robosys2024/blob/main/word.txt)内の単語をランダムで出力します。
 
+下記コマンドでrandom_wordに実行権限を付与してください。
+```
+$ chmod +x random_word
+```
+下記コマンドに任意の数字を入力して実行してください。
+```
+$ echo "" | ./random_word
+```
+## 実行例
 ```
 $ echo 4 | ./random_word
 ミキサー
