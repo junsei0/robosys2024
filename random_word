@@ -15,9 +15,8 @@ try:
         random_word = random.choice(file_data)
         print(random_word)
     else:
-        sys.exit("Error: 指定した文字数の単語はない")
-
+        print("Error: 指定した文字数の単語はない", file=sys.stderr)
 except:
-    sys.exit("Input Error")
+    print("Input Error", file=sys.stderr)
 
 
