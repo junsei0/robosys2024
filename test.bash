@@ -21,7 +21,7 @@ out=$(echo あ | ./random_word)
 [ "${out}" = "Input Error" ] || ng ${LINENO}
 
 out=$(echo 0 | ./random_word)
-[ "${out}" =  ] || ng ${LINENO}
+[ "${out}" = "" ] || ng ${LINENO}
 
 out=$(echo -1 | ./random_word)
 [ "${out}" = "Error: 指定した文字数の単語はない" ] || ng ${LINENO}
