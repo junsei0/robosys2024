@@ -11,22 +11,22 @@ ng () {
 res=0
 
 ###変な入力###
-out=$(echo  | ./kadai)
+out=$(echo  | ./random_word)
 [ "${out}" = "Input Error" ] || ng ${LINENO}
 
-out=$(echo a | ./kadai)
+out=$(echo a | ./random_word)
 [ "${out}" = "Input Error" ] || ng ${LINENO}
 
-out=$(echo あ | ./kadai)
+out=$(echo あ | ./random_word)
 [ "${out}" = "Input Error" ] || ng ${LINENO}
 
-out=$(echo 0 | ./kadai)
+out=$(echo 0 | ./random_word)
 [ "${out}" = "Error: 指定した文字数の単語はない" ] || ng ${LINENO}
 
-out=$(echo -1 | ./kadai)
+out=$(echo -1 | ./random_word)
 [ "${out}" = "Error: 指定した文字数の単語はない" ] || ng ${LINENO}
 
-out=$(echo 15 | ./kadai)
+out=$(echo 15 | ./random_word)
 [ "${out}" = "Error: 指定した文字数の単語はない" ] || ng ${LINENO}
 
 [ "${res}" = 0 ] && echo OK
