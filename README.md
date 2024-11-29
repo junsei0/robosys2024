@@ -18,7 +18,7 @@
 ```
 $ git clone https://github.com/junsei0/robosys2024.git
 ```
-### 実行方法
+## 実行方法
 下記コマンドでディレクトリに移動してから実行してください。
 ```
 $ cd robosys2024
@@ -32,10 +32,10 @@ $ echo 4 | ./random_word
 
 $ echo 4 | ./random_word
 パソコン
+```
 
-## ライセンス
+## 著作権・ライセンス
 - このソフトウェアパッケージは、３条項BSDライセンスの下で公開されています。
-
-## copyright
-© 2024 Junsei Iimori
+- 詳細は[LICENSE](https://github.com/junsei0/robosys2024/blob/main/LICENSE)を確認してください
+- 🄫 2024 Junsei Iimori
 
