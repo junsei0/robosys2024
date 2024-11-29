@@ -28,11 +28,11 @@ $ git clone https://github.com/junsei0/robosys2024.git
 echoコマンドで入力された数字と同じ文字数の単語をランダムで出力するコマンドです。
 word.txt内の単語をランダムで出力します。
 ```
-$ echo 5 | ./random_word
-ンジャメナ
+$ echo 4 | ./random_word
+ミキサー
 
-$ echo 5 | ./random_word
-ドライバー
+$ echo 4 | ./random_word
+パソコン
 ```
 
 © 2024 Junsei Iimori
