@@ -29,6 +29,9 @@ echoコマンドで入力された数字と同じ文字数の単語をランダ�
 word.txt内の単語をランダムで出力します。
 ```
 $ echo 5 | ./random_word
+ンジャメナ
+
+$ echo 5 | ./random_word
 ドライバー
 ```
 
