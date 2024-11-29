@@ -12,12 +12,22 @@ res=0
 
 ###変な入力###
 out=$(echo  | ./kadai)
-[ "$?" = 1]	|| ng ${LINENO}
 [ "${out}" = "Input Error" ] || ng ${LINENO}
 
-out=$(echo 12 | ./kadai)
+out=$(echo a | ./kadai)
+[ "${out}" = "Input Error" ] || ng ${LINENO}
+
+out=$(echo あ | ./kadai)
+[ "${out}" = "Input Error" ] || ng ${LINENO}
+
+out=$(echo 0 | ./kadai)
 [ "${out}" = "Error: 指定した文字数の単語はない" ] || ng ${LINENO}
-[ "$?" = 1]	|| ng ${LINENO}
+
+out=$(echo -1 | ./kadai)
+[ "${out}" = "Error: 指定した文字数の単語はない" ] || ng ${LINENO}
+
+out=$(echo 15 | ./kadai)
+[ "${out}" = "Error: 指定した文字数の単語はない" ] || ng ${LINENO}
 
 [ "${res}" = 0 ] && echo OK
 exit $res
