@@ -35,7 +35,8 @@ $ echo 4 | ./random_word
 
 ## ライセンス
 - このソフトウェアパッケージは、３条項BSDライセンスの下で公開されています。
-- 詳細は[LICENCE](https://github.com/junsei0/robosys2024/blob/main/LICENSE)
+- 詳細は[LICENSE](https://github.com/junsei0/robosys2024/blob/main/LICENSE)
+
 
 ## copyright
 © 2024 Junsei Iimori
