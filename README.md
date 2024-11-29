@@ -18,19 +18,22 @@
 ```
 $ git clone https://github.com/junsei0/robosys2024.git
 ```
+
+## 概要
+- echoコマンドで入力された数字と同じ文字数の単語をランダムで出力するコマンドです。  
+- [word.txt](https://github.com/junsei0/robosys2024/blob/main/word.txt)内の単語をランダムで出力します。
+
 ## 実行方法
 下記コマンドでディレクトリに移動してから実行してください。
 ```
 $ cd robosys2024
 ```
-echoコマンドで入力された数字と同じ文字数の単語をランダムで出力するコマンドです。  
-[word.txt](https://github.com/junsei0/robosys2024/blob/main/word.txt)内の単語をランダムで出力します。
-
-下記コマンドでrandom_wordに実行権限を付与してください。
+実行権限の付与が必要です。  
+下記コマンドで付与してください。  
 ```
 $ chmod +x random_word
 ```
-下記コマンドに任意の数字を入力して実行してください。
+echoの""部分に任意の数字を入力して実行してください。
 ```
 $ echo "" | ./random_word
 ```
