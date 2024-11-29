@@ -1,7 +1,8 @@
-# plusコマンド
+# random_word
+##roobsys2024
+千葉工業大学 未来ロボティクス学科2024年度ロボットシステム学の講義内で行った内容に、課題1で作成したファイルを追加したものです。
 
-標準入力から読み込んだ数字を足す。
-(ここに前ページの項目をいろいろ書く)
+[![test](https://github.com/junsei0/robosys2024/actions/workflows/test.yml/badge.svg)](https://github.com/junsei0/robosys2024/actions/workflows/test.yml)
 
 ## 必要なソフトウェア
 - Python
