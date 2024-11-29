@@ -3,19 +3,21 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 import random
+import sys
 
 word = open('word.txt', 'r', encoding='UTF-8')
 
 data = word.read().split("\n")
 try:
-    word_len = int(input())
+    word_len = int(sys.stdin.readline().strip())
     file_data = [line for line in data if len(line) == word_len]
     if file_data:
         random_word = random.choice(file_data)
         print(random_word)
     else:
-        print("Error: 指定した文字数の単語はない")
+        print("Error: 指定した文字数の単語はない", file=sys.stderr)
+
 except:
-    print("Input Error")
+    print("Input Error", file=sys.stderr)
 
 
