@@ -24,7 +24,7 @@ $ git clone https://github.com/junsei0/robosys2024.git
 $ cd robosys2024
 ```
 echoコマンドで入力された数字と同じ文字数の単語をランダムで出力するコマンドです。  
-<word.txt>内の単語をランダムで出力します。
+[word.txt]内の単語をランダムで出力します。
 
 ```
 $ echo 4 | ./random_word
@@ -33,5 +33,8 @@ $ echo 4 | ./random_word
 $ echo 4 | ./random_word
 パソコン
 
+## ライセンス
+- このソフトウェアパッケージは、３条項BSDライセンスの下で公開されています。
+- 詳細は[LICENCE]()
 © 2024 Junsei Iimori
 
