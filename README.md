@@ -21,7 +21,7 @@ $ git clone https://github.com/junsei0/robosys2024.git
 
 ## 概要
 - echoコマンドで入力された数字と同じ文字数の単語をランダムで出力するコマンドです。  
-- [word.txt](https://github.com/junsei0/robosys2024/blob/main/word.txt)内の単語をランダムで出力します。
+- 出力される単語は[word.txt](https://github.com/junsei0/robosys2024/blob/main/word.txt)内に記入されている単語を使用しています。
 
 ## 実行方法
 下記コマンドでディレクトリに移動してから実行してください。
