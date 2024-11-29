@@ -11,13 +11,13 @@
 ## テスト環境
 - Ubuntu 24.04 LTS
 
-###使用方法
+## 使用方法
 使用する場合は、"git"コマンドを使用してリポジトリをクローンしてください。
- //git clone https://github.com/junsei0/robosys2024.git//
+'$ git clone https://github.com/junsei0/robosys2024.git'
 
-###実行方法
+## 実行方法
 下記コマンドでディレクトリに移動してから実行してください。
- //cd robosys2024//
+ cd robosys2024
 
 
 © 2024 Junsei Iimori
