@@ -24,16 +24,6 @@ $ git clone https://github.com/junsei0/robosys2024.git
  cd robosys2024
 ```
 
-## random_word 使い方
-echoコマンドで入力された数字と同じ文字数の単語をランダムで出力するコマンドです。
-word.txt内の単語をランダムで出力します。
-```
-$ echo 4 | ./random_word
-ミキサー
-
-$ echo 4 | ./random_word
-パソコン
-```
 
 © 2024 Junsei Iimori
 
