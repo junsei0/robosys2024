@@ -14,7 +14,7 @@
 - Ubuntu 20.04 LTS
 
 ## 使用方法
-使用する場合は、"git"コマンドを使用してリポジトリをクローンしてください。
+使用する場合は、gitコマンドを使用してリポジトリをクローンしてください。
 ```
 $ git clone https://github.com/junsei0/robosys2024.git
 ```
