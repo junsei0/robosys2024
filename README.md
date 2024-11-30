@@ -1,4 +1,4 @@
-# random_word
+# plus & random_word
 
 **roobsys2024**    
 千葉工業大学 未来ロボティクス学科2024年度ロボットシステム学の講義内で行った内容に、課題1で作成したファイルを追加したものです。
@@ -20,7 +20,7 @@ $ git clone https://github.com/junsei0/robosys2024.git
 ```
 
 ## 概要
-- echoと|(パイプ)を使用して入力された数字と同じ文字数の単語をランダムで出力するコマンドです。  
+- 入力された数字と同じ文字数の単語をランダムで出力するコマンドです。  
 - 出力される単語は[word.txt](https://github.com/junsei0/robosys2024/blob/main/word.txt)内に記入されている単語を使用しています。
 
 ## 実行方法
@@ -33,9 +33,9 @@ $ cd robosys2024
 ```
 $ chmod +x random_word
 ```
-echoの""部分に任意の数字を入力して実行してください。
+任意の数字を入力して実行してください。
 ```
-$ echo "" | ./random_word
+$ echo 4 | ./random_word
 ```
 ## 実行例
 ```
@@ -47,7 +47,7 @@ $ echo 4 | ./random_word
 ```
 
 ## 著作権・ライセンス
-- このソフトウェアパッケージは、３条項BSDライセンスの下で公開されています。
+- このソフトウェアパッケージは、3条項BSDライセンスの下で公開されています。
 - 詳細は[LICENSE](https://github.com/junsei0/robosys2024/blob/main/LICENSE)を確認してください
 - ©︎ 2024 Junsei Iimori
 
