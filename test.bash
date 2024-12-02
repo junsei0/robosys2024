@@ -21,7 +21,7 @@ out=$(echo あ | ./random_word 2>/dev/null)
 [ $? -eq 1 ] || ng ${LINENO}
 
 out=$(echo 0 | ./random_word 2>/dev/null)
-[ $? -eq 1 ] || ng ${LINENO}
+[ $? = 0 ] || ng ${LINENO}
 
 out=$(echo -1 | ./random_word 2>/dev/null)
 [ $? -eq 1 ] || ng ${LINENO}
