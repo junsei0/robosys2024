@@ -14,16 +14,22 @@
 - Ubuntu 20.04 LTS
 
 ## 使用方法
-使用する場合は、"git"コマンドを使用してリポジトリをクローンしてください。
+使用する場合は、gitコマンドを使用してリポジトリをクローンしてください。
 ```
 $ git clone https://github.com/junsei0/robosys2024.git
 ```
 
 ## 概要
+<<<<<<< HEAD
 - echoコマンドで入力された数字と同じ文字数の単語をランダムで出力するコマンドです。  
 - 出力される単語は[word.txt](https://github.com/junsei0/robosys2024/blob/main/word.txt)内に記入されている単語を使用しています。
 
 
+=======
+- 入力された数字と同じ文字数の単語をランダムで出力するコマンドです。  
+- 出力される単語は[word.txt](https://github.com/junsei0/robosys2024/blob/main/word.txt)内に記入されている単語を使用しています。
+
+>>>>>>> 31ade952c0c569d97b8ad6e2131be4a3384d4af3
 ## 実行方法
 下記コマンドでディレクトリに移動してから実行してください。
 ```
@@ -34,12 +40,20 @@ $ cd robosys2024
 ```
 $ chmod +x random_word
 ```
+<<<<<<< HEAD
 echoの""部分に任意の数字を入力して実行してください。
 ```
 $ echo "" | ./random_word
 ```
 ## 実行例
 
+=======
+任意の数字を入力して実行してください。
+```
+$ echo 4 | ./random_word
+```
+## 実行例
+>>>>>>> 31ade952c0c569d97b8ad6e2131be4a3384d4af3
 ```
 $ echo 4 | ./random_word
 ミキサー
@@ -49,7 +63,7 @@ $ echo 4 | ./random_word
 ```
 
 ## 著作権・ライセンス
-- このソフトウェアパッケージは、３条項BSDライセンスの下で公開されています。
+- このソフトウェアパッケージは、3条項BSDライセンスの下で公開されています。
 - 詳細は[LICENSE](https://github.com/junsei0/robosys2024/blob/main/LICENSE)を確認してください
-- 🄫 2024 Junsei Iimori
+- ©︎ 2024 Junsei Iimori
 

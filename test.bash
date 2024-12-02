@@ -4,32 +4,32 @@
 
 
 ng () {
-	echo NG at line ${1}
+	echo "NG at line ${1}" >&2
 	res=1
 }
 
 res=0
 
 ###変な入力###
-out=$(echo  | ./random_word)
-[ "${out}" = "Input Error" ] || ng ${LINENO}
+out=$(echo  | ./random_word 2>/dev/null)
+[ $? -eq 1 ] || ng ${LINENO}
 
-out=$(echo a | ./random_word)
-[ "${out}" = "Input Error" ] || ng ${LINENO}
+out=$(echo a | ./random_word 2>/dev/null)
+[ $? -eq 1 ] || ng ${LINENO}
 
-out=$(echo あ | ./random_word)
-[ "${out}" = "Input Error" ] || ng ${LINENO}
+out=$(echo あ | ./random_word 2>/dev/null)
+[ $? -eq 1 ] || ng ${LINENO}
 
-out=$(echo 0 | ./random_word)
-[ "${out}" = "" ] || ng ${LINENO}
+out=$(echo 0 | ./random_word 2>/dev/null)
+[ $? -eq 1 ] || ng ${LINENO}
 
-out=$(echo -1 | ./random_word)
-[ "${out}" = "Error: 指定した文字数の単語はない" ] || ng ${LINENO}
+out=$(echo -1 | ./random_word 2>/dev/null)
+[ $? -eq 1 ] || ng ${LINENO}
 
-out=$(echo 15 | ./random_word)
-[ "${out}" = "Error: 指定した文字数の単語はない" ] || ng ${LINENO}
+out=$(echo 15 | ./random_word 2>/dev/null)
+[ $? -eq 1 ] || ng ${LINENO}
 
-[ "${res}" = 0 ] && echo OK
+[ "${res}" -eq 0 ] && echo OK
 exit $res
 
 

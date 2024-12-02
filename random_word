@@ -5,10 +5,10 @@
 import random
 import sys
 
-word = open('word.txt', 'r', encoding='UTF-8')
-
-data = word.read().split("\n")
 try:
+    with open('word.txt', 'r', encoding='UTF-8') as word:
+        data = word.read().split("\n")
+
     word_len = int(sys.stdin.readline().strip())
     file_data = [line for line in data if len(line) == word_len]
     if file_data:
@@ -16,7 +16,8 @@ try:
         print(random_word)
     else:
         print("Error: 指定した文字数の単語はない")
-except:
+        sys.exit(1)
+except ValueError:
     print("Input Error")
-
+    sys.exit(1)
 
