@@ -4,29 +4,29 @@
 
 
 ng () {
-	echo "NG at line ${1}" >&2
+	echo NG at line ${1}
 	res=1
 }
 
 res=0
 
 ###変な入力###
-out=$(echo  | ./random_word 2>/dev/null)
+out=$(echo  | ./random_word )
 [ $? -eq 1 ] || ng ${LINENO}
 
-out=$(echo a | ./random_word 2>/dev/null)
+out=$(echo a | ./random_word )
 [ $? -eq 1 ] || ng ${LINENO}
 
-out=$(echo あ | ./random_word 2>/dev/null)
+out=$(echo あ | ./random_word )
 [ $? -eq 1 ] || ng ${LINENO}
 
-out=$(echo 0 | ./random_word 2>/dev/null)
+out=$(echo 0 | ./random_word )
 [ $? = 0 ] || ng ${LINENO}
 
-out=$(echo -1 | ./random_word 2>/dev/null)
+out=$(echo -1 | ./random_word )
 [ $? -eq 1 ] || ng ${LINENO}
 
-out=$(echo 15 | ./random_word 2>/dev/null)
+out=$(echo 15 | ./random_word )
 [ $? -eq 1 ] || ng ${LINENO}
 
 [ "${res}" -eq 0 ] && echo OK
